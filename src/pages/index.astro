@@ -15,7 +15,7 @@ import Footer from '../components/Footer.astro';
 	<Header />
 	<div id="navigacija"></div>
 	<Image id="hero" src={hero} alt="" />
-	<div class="bg" style=`background-image: url(${bg1.src});`>
+	<div id="bg1" class="bg" style=`background-image: url(${bg1.src});`>
 		<div>
 			<h1>SAMOUBISTVO NE MORA DA SE DOGODI!</h1>
 			<br />
@@ -24,6 +24,20 @@ import Footer from '../components/Footer.astro';
 				i prihvatamo je bez osude, može biti od velikog značaja<br />
 				za njeno sagledavanje situacije u kojoj se nalazi.
 			</h2>
+		</div>
+	</div>
+	<div id="prijava">
+		<h1>Pridružite nam se!</h1>
+		<p>Ako želite da učinite nešto za ljude koji vas okružuju</p>
+		<p>Ako imate malo slobodnog vremena koje želite korisno da provedete</p>
+		<p>Ako ste topli, strpljivi, otvoreni i nemate predrasuda</p>
+		<p>Ako nemate baš sve te osobine ali imate volju da ih razvijete</p>
+		<div id="prijava_link_position">
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLSegrUXpiXD31WXbfjVI4I9WJyRZBAdWolQMthrsoI5qmj4cyg/viewform?pli=1"
+				target="_blank"
+				id="prijava_link">Prijava</a
+			>
 		</div>
 	</div>
 	<div class="bg" style=`background-image: url(${bg2.src});`>
@@ -59,7 +73,6 @@ import Footer from '../components/Footer.astro';
 		color: white;
 		font-family: Arial, Helvetica, sans-serif;
 		height: 400px;
-		margin-top: 150px;
 		text-align: center;
 	}
 
@@ -71,5 +84,41 @@ import Footer from '../components/Footer.astro';
 	.bg h1,
 	.bg h2 {
 		margin: 0;
+	}
+
+	#bg1 {
+		margin-top: 150px;
+	}
+
+	#prijava {
+		font-family: Arial, Helvetica, sans-serif;
+		color: #3d3d3d;
+		text-align: center;
+	}
+
+	#prijava > * {
+		margin: 0;
+	}
+
+	#prijava h1 {
+		margin: 10px 0;
+	}
+
+	#prijava_link_position {
+		margin-bottom: 10px !important;
+		margin-top: 10px !important;
+	}
+
+	#prijava_link {
+		text-decoration: none;
+		color: #ffffff;
+		background-color: #8d5fa8;
+		padding: 10px 20px 10px 20px;
+		display: inline-block;
+	}
+
+	#prijava_link:hover {
+		background-color: #e5e5e5;
+		color: #8d5fa8;
 	}
 </style>
