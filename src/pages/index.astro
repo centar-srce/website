@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
 import { Image } from 'astro:assets';
 import hero from '../assets/hero.jpg';
 import bg1 from '../assets/bg1.jpg';
@@ -13,7 +14,7 @@ import Footer from '../components/Footer.astro';
 
 <Layout>
 	<Header />
-	<div id="navigacija"></div>
+	<Nav />
 	<Image id="hero" src={hero} alt="" />
 	<div id="bg1" class="bg" style=`background-image: url(${bg1.src});`>
 		<div>
@@ -55,13 +56,6 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
-	#navigacija {
-		background-color: #8f64aa;
-		height: 80px;
-		position: sticky;
-		top: 0;
-	}
-
 	#hero {
 		height: auto;
 		width: 100%;
