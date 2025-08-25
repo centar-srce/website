@@ -2,6 +2,11 @@
 import { Image } from 'astro:assets';
 import befrienders from '../assets/befrienders.png';
 import iasp from '../assets/iasp.png';
+import facebook from '../assets/facebook.png';
+import youtube from '../assets/youtube.png';
+import twitter from '../assets/twitter.png';
+import instagram from '../assets/instagram.png';
+import playstore from '../assets/playstore.png';
 ---
 
 <div id="links">
@@ -13,9 +18,168 @@ import iasp from '../assets/iasp.png';
 	</a>
 </div>
 
+<footer>
+	<div>
+		<div>
+			<a href="#">Samoubistvo</a>
+			<a href="#">Kako pomoći?</a>
+			<a href="#">Mentalno zdravlje</a>
+			<a href="#">Download</a>
+			<a href="#">O nama</a>
+			<a href="#">Vesti</a>
+			<a href="#">Volontiranje</a>
+			<a href="#">Donacije</a>
+		</div>
+		<div id="footer2">
+			<p>
+				Dinarski račun<br />
+				325-9500600063672-27<br />
+				OTP Banka A.D.<br />
+				Trg Slobode 5, Novi Sad<br />
+			</p>
+			<p id="devizni_racun">
+				Devizni račun<br />
+				20-305-0000030<br />
+				ProCredit Bank a.d., ekspozitura Novi Sad,<br />
+				Bulevar Cara Lazara 76
+			</p>
+		</div>
+		<div>
+			<div id="footer31">
+				<p>Telefon</p>
+				<p>Besplatan broj</p>
+				<p>Email</p>
+				<p>Čet preko našeg sajta</p>
+				<p>Radno vreme</p>
+				<p>&nbsp;</p>
+			</div>
+			<div id="footer32">
+				<p>021/6623 393</p>
+				<p>0800/ 300 303</p>
+				<p>vanja@centarsrce.org</p>
+				<p>www.centarsrce.org</p>
+				<p>svakog dana</p>
+				<p>od 14 do 23</p>
+			</div>
+		</div>
+	</div>
+	<div id="potpis_sadrzaj">
+		<div id="potpis">
+			<p>
+				<a href="#">&copy 2016. Centar Srce</a>
+				Design by <a href="mailto:mushusasa@gmail.com">Vanja & Mushu</a>
+			</p>
+		</div>
+		<div id="socijalne_mreze">
+			<a
+				href="https://www.facebook.com/Centar-Srce-117397131639928/"
+				target="_blank"
+			>
+				<Image src={facebook} alt="Facebook" />
+			</a>
+			<a href="https://www.youtube.com/user/centarsrce" target="_blank">
+				<Image src={youtube} alt="YouTube" />
+			</a>
+			<a href="https://twitter.com/centarsrce" target="_blank">
+				<Image src={twitter} alt="Twitter" />
+			</a>
+			<a href="https://instagram.com/centarsrce" target="_blank">
+				<Image src={instagram} alt="Instagram" />
+			</a>
+			<a
+				href="https://play.google.com/store/apps/details?id=com.centarsrce"
+				target="_blank"
+			>
+				<Image src={playstore} alt="Play Store" />
+			</a>
+		</div>
+	</div>
+</footer>
+
 <style>
 	#links {
 		padding: 20px 0;
 		text-align: center;
+	}
+
+	footer {
+		background-color: #3d3d3d;
+		color: #ffffff;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	footer > div {
+		max-width: 1170px;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 0;
+	}
+
+	footer a {
+		color: #ffffff;
+		text-decoration: none;
+		display: block;
+	}
+
+	footer p {
+		margin: 0;
+	}
+
+	#footer2 p {
+		text-align: center;
+	}
+
+	#devizni_racun {
+		margin-top: 10px;
+		padding-top: 5px;
+		border-top: 1px solid white;
+	}
+
+	#footer31 {
+		display: inline-block;
+		padding-right: 10px;
+		border-right: 1px solid white;
+		margin-right: 5px;
+		text-align: right;
+	}
+
+	#footer32 {
+		display: inline-block;
+	}
+
+	#potpis a {
+		display: inline;
+		color: #8d5fa8;
+	}
+
+	#socijalne_mreze img {
+		width: 30px;
+		height: auto;
+		border-radius: 50%;
+		transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+	}
+
+	#socijalne_mreze a {
+		display: inline;
+		margin-right: 10px;
+	}
+
+	#socijalne_mreze img:hover {
+		transform: scale(1.5, 1.5);
+		-webkit-transform: scale(1.5, 1.5);
+		-moz-transform: scale(1.5, 1.5);
+		-ms-transform: scale(1.5, 1.5);
+		-o-transform: scale(1.5, 1.5);
+		box-shadow: 0 0 10px #e5e5e5;
+	}
+
+	#potpis_sadrzaj {
+		display: flex;
+		align-items: flex-end;
+		padding-bottom: 50px;
 	}
 </style>
