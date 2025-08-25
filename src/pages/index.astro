@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import { Image } from 'astro:assets';
+import hero from '../assets/hero.jpg';
+import bg1 from '../assets/bg1.jpg';
+import bg2 from '../assets/bg2.jpg';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -8,4 +12,62 @@ import Header from '../components/Header.astro';
 
 <Layout>
 	<Header />
+	<div id="navigacija"></div>
+	<Image id="hero" src={hero} alt="" />
+	<div class="bg" style=`background-image: url(${bg1.src});`>
+		<div>
+			<h1>SAMOUBISTVO NE MORA DA SE DOGODI!</h1>
+			<br />
+			<h2>
+				Iskren i neosuđujući razgovor, u kom osobu pažljivo slušamo<br />
+				i prihvatamo je bez osude, može biti od velikog značaja<br />
+				za njeno sagledavanje situacije u kojoj se nalazi.
+			</h2>
+		</div>
+	</div>
+	<div class="bg" style=`background-image: url(${bg2.src});`>
+		<div>
+			<h1>SARAĐUJTE SA NAMA!</h1>
+			<br />
+			<h2>
+				Zainteresovani smo za saradnju u oblasti zaštite i<br />
+				unapređenja mentalnog zdravlja sa javnim, korporativnim<br />
+				i civilnim sektorom
+			</h2>
+		</div>
+	</div>
 </Layout>
+
+<style>
+	#navigacija {
+		background-color: #8f64aa;
+		height: 80px;
+		position: sticky;
+		top: 0;
+	}
+
+	#hero {
+		height: auto;
+		width: 100%;
+	}
+
+	.bg {
+		background-attachment: fixed;
+		background-position: center center;
+		color: white;
+		font-family: Arial, Helvetica, sans-serif;
+		height: 400px;
+		margin-top: 150px;
+		text-align: center;
+	}
+
+	.bg > div {
+		position: relative;
+		top: 115px;
+	}
+
+	.bg h1,
+	.bg h2 {
+		margin: 0;
+	}
+</style>
