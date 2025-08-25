@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import doniraj from '../assets/doniraj.png';
+---
+
+<header>
+	<a href="#">
+		<Image src={logo} alt="Logo" width="280" />
+	</a>
+	<div>
+		<p id="radno_vreme">Svakog dana od 14 do 23</p>
+		<div id="split">
+			<div>
+				<p>0800-300-303</p>
+				<a id="email" href="mailto:vanja@centarsrce.org">
+					vanja@centarsrce.org
+				</a>
+			</div>
+			<p id="podrska">
+				Podrška putem četa<br />na dnu stranice<br />našeg sajta
+			</p>
+		</div>
+	</div>
+	<a href="#">
+		<Image src={doniraj} alt="Podržite rad Srca" width="170" />
+	</a>
+</header>
+
+<style>
+	header {
+		align-items: center;
+		color: #3d3d3d;
+		display: flex;
+		font-family: Cambria, Georgia, serif;
+		font-size: 26px;
+		justify-content: space-between;
+		margin: auto;
+		max-width: 1170px;
+		padding: 20px 0;
+	}
+
+	header p {
+		margin: 0;
+	}
+
+	#radno_vreme {
+		background-color: #8f64aa;
+		border-radius: 9999px;
+		color: #ffffff;
+		margin-bottom: 5px;
+		text-align: center;
+		width: 407px;
+	}
+
+	#split {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#email {
+		color: #8d5fa8;
+		text-decoration: none;
+	}
+
+	#podrska {
+		font-size: 18px;
+		text-align: center;
+	}
+</style>
