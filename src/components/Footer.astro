@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import befrienders from '../assets/befrienders.png';
+import iasp from '../assets/iasp.png';
+---
+
+<div id="links">
+	<a href="https://www.befrienders.org/" target="_blank">
+		<Image src={befrienders} alt="Befrienders" height="70" />
+	</a>
+	<a href="https://www.iasp.info/" target="_blank">
+		<Image src={iasp} alt="IASP" height="70" />
+	</a>
+</div>
+
+<style>
+	#links {
+		padding: 20px 0;
+		text-align: center;
+	}
+</style>
