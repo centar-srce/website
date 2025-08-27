@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
+import MobileNav from '../components/MobileNav.astro';
 import { Image } from 'astro:assets';
 import hero from '../assets/hero.jpg';
 import bg1 from '../assets/bg1.jpg';
@@ -13,6 +14,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
+	<MobileNav />
 	<Header />
 	<Nav />
 	<Image id="hero" src={hero} alt="" />

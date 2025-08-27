@@ -1,0 +1,120 @@
+---
+import Menu from '../assets/menu.svg';
+import Logo from '../../public/favicon.svg';
+
+const brandColor = '#8b60a6';
+const textColor = '#3d3d3d';
+---
+
+<header>
+	<div id="header-content">
+		<Logo id="logo" />
+		<input id="trigger" type="checkbox" />
+		<label for="trigger">
+			<Menu id="hamburger" />
+		</label>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="#">Početna</a></li>
+			<li><a href="#">Samoubistvo</a></li>
+			<li><a href="#">Kako pomoći?</a></li>
+			<li><a href="#">Mentalno zdravlje</a></li>
+			<li><a href="#">Download</a></li>
+			<li><a href="#">O nama</a></li>
+			<li><a href="#">Vesti</a></li>
+			<li><a href="#">Volontiranje</a></li>
+			<li><a href="#">Donacije</a></li>
+			<li><a href="#">Podkast</a></li>
+		</ul>
+	</nav>
+</header>
+
+<style define:vars={{ brandColor, textColor }}>
+	@media (width >= 1170px) {
+		header {
+			display: none;
+		}
+	}
+
+	header {
+		background-color: white;
+		border-bottom: 1px solid #e5e5e5;
+		position: sticky;
+		top: 0;
+		z-index: 1;
+	}
+
+	#header-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px 24px;
+	}
+
+	#logo {
+		height: 32px;
+		width: 32px;
+	}
+
+	#trigger {
+		display: none;
+	}
+
+	label {
+		width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid var(--brandColor);
+		border-radius: 12px;
+		background-color: white;
+		color: var(--textColor);
+		transition-property: background-color, color;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms;
+		cursor: pointer;
+		user-select: none;
+	}
+
+	#trigger:checked ~ label {
+		background-color: var(--brandColor);
+		color: white;
+	}
+
+	#hamburger {
+		height: 12px;
+		width: 12px;
+	}
+
+	nav {
+		display: none;
+	}
+
+	#header-content:has(#trigger:checked) ~ nav {
+		display: block;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 16px 24px;
+	}
+
+	li + li {
+		margin-top: 8px;
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--textColor);
+		transition-property: color;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms;
+	}
+
+	a:hover {
+		color: var(--brandColor);
+	}
+</style>
