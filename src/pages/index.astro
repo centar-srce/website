@@ -5,6 +5,7 @@ import Nav from '../components/Nav.astro';
 import MobileNav from '../components/MobileNav.astro';
 import { Image } from 'astro:assets';
 import hero from '../assets/hero.jpg';
+import ParallaxBackground from '../components/ParallaxBackground.astro';
 import bg1 from '../assets/bg1.jpg';
 import bg2 from '../assets/bg2.jpg';
 import Network from '../components/Network.astro';
@@ -19,17 +20,11 @@ import Footer from '../components/Footer.astro';
 	<Header />
 	<Nav />
 	<Image id="hero" src={hero} alt="" />
-	<div id="bg1" class="bg" style=`background-image: url(${bg1.src});`>
-		<div>
-			<h1>SAMOUBISTVO NE MORA DA SE DOGODI!</h1>
-			<br />
-			<h2>
-				Iskren i neosuđujući razgovor, u kom osobu pažljivo slušamo<br />
-				i prihvatamo je bez osude, može biti od velikog značaja<br />
-				za njeno sagledavanje situacije u kojoj se nalazi.
-			</h2>
-		</div>
-	</div>
+	<ParallaxBackground image={bg1} title="Samoubistvo ne mora da se dogodi!">
+		Iskren i neosuđujući razgovor, u kom osobu pažljivo slušamo i prihvatamo je
+		bez osude, može biti od velikog značaja za njeno sagledavanje situacije u
+		kojoj se nalazi.
+	</ParallaxBackground>
 	<div id="prijava">
 		<h1>Pridružite nam se!</h1>
 		<p>Ako želite da učinite nešto za ljude koji vas okružuju</p>
@@ -44,17 +39,10 @@ import Footer from '../components/Footer.astro';
 			>
 		</div>
 	</div>
-	<div class="bg" style=`background-image: url(${bg2.src});`>
-		<div>
-			<h1>SARAĐUJTE SA NAMA!</h1>
-			<br />
-			<h2>
-				Zainteresovani smo za saradnju u oblasti zaštite i<br />
-				unapređenja mentalnog zdravlja sa javnim, korporativnim<br />
-				i civilnim sektorom
-			</h2>
-		</div>
-	</div>
+	<ParallaxBackground image={bg2} title="Sarađujte sa nama!">
+		Zainteresovani smo za saradnju u oblasti zaštite i unapređenja mentalnog
+		zdravlja sa javnim, korporativnim i civilnim sektorom
+	</ParallaxBackground>
 	<Network />
 	<Footer />
 </Layout>

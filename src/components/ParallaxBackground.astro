@@ -1,0 +1,17 @@
+---
+const { image, title } = Astro.props;
+const backgroundUrl = `url(${image.src})`;
+---
+
+<div class="bg-fixed bg-center px-4 py-16 text-center text-white/85 sm:py-36">
+	<h2 class="text-lg font-bold uppercase sm:text-4xl">{title}</h2>
+	<p class="m-auto mt-4 text-sm font-medium sm:max-w-2xl sm:text-2xl">
+		<slot />
+	</p>
+</div>
+
+<style define:vars={{ backgroundUrl }}>
+	div {
+		background-image: var(--backgroundUrl);
+	}
+</style>
