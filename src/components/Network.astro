@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import befrienders from '../assets/befrienders.svg';
+import iasp from '../assets/iasp.png';
+---
+
+<div class="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row">
+	<a href="https://befrienders.org/" target="_blank">
+		<Image src={befrienders} alt="Befrienders logo" height="80" />
+	</a>
+	<a href="https://www.iasp.info/" target="_blank">
+		<Image src={iasp} alt="IASP logo" height="80" />
+	</a>
+</div>
