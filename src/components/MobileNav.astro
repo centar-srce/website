@@ -1,6 +1,7 @@
 ---
 import Menu from '../assets/menu.svg';
 import Logo from '../../public/favicon.svg';
+import Link from '../components/Link.astro';
 
 const brandColor = '#8b60a6';
 const textColor = '#3d3d3d';
@@ -16,16 +17,16 @@ const textColor = '#3d3d3d';
 	</div>
 	<nav>
 		<ul>
-			<li><a href="#">Početna</a></li>
-			<li><a href="#">Samoubistvo</a></li>
-			<li><a href="#">Kako pomoći?</a></li>
-			<li><a href="#">Mentalno zdravlje</a></li>
-			<li><a href="#">Download</a></li>
-			<li><a href="#">O nama</a></li>
-			<li><a href="#">Vesti</a></li>
-			<li><a href="#">Volontiranje</a></li>
-			<li><a href="#">Donacije</a></li>
-			<li><a href="#">Podkast</a></li>
+			<li><Link to="/">Početna</Link></li>
+			<li><Link>Samoubistvo</Link></li>
+			<li><Link>Kako pomoći?</Link></li>
+			<li><Link>Mentalno zdravlje</Link></li>
+			<li><Link>Download</Link></li>
+			<li><Link>O nama</Link></li>
+			<li><Link>Vesti</Link></li>
+			<li><Link to="/volontiranje">Volontiranje</Link></li>
+			<li><Link to="/donacije">Donacije</Link></li>
+			<li><Link>Podkast</Link></li>
 		</ul>
 	</nav>
 </header>
@@ -104,17 +105,5 @@ const textColor = '#3d3d3d';
 
 	li + li {
 		margin-top: 8px;
-	}
-
-	a {
-		text-decoration: none;
-		color: var(--textColor);
-		transition-property: color;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 150ms;
-	}
-
-	a:hover {
-		color: var(--brandColor);
 	}
 </style>
