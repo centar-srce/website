@@ -1,7 +1,8 @@
 ---
 import Menu from '../assets/menu.svg';
 import Logo from '../../public/favicon.svg';
-import Link from '../components/Link.astro';
+import DonationButton from './DonationButton.astro';
+import Link from './Link.astro';
 
 const brandColor = '#8b60a6';
 const textColor = '#3d3d3d';
@@ -10,12 +11,7 @@ const textColor = '#3d3d3d';
 <header>
 	<div id="header-content">
 		<Logo id="logo" />
-		<a
-			href="/donacije"
-			class="bg-brand mr-4 ml-auto cursor-pointer rounded-sm px-3 py-1.5 text-sm text-white transition-colors hover:bg-purple-800"
-		>
-			Podržite rad Srca
-		</a>
+		<DonationButton className="mr-4 ml-auto" />
 		<input id="trigger" type="checkbox" />
 		<label for="trigger">
 			<Menu id="hamburger" />

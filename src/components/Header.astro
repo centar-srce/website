@@ -1,74 +1,30 @@
 ---
 import { Image } from 'astro:assets';
 import doniraj from '../assets/doniraj.png';
+import DonationButton from './DonationButton.astro';
 ---
 
-<header>
-	<a href="#">
-		<img src="/logo.png" height="109" />
+<header
+	class="text-neutral desktop:flex-row flex flex-col items-center justify-between gap-2 p-6 text-lg"
+>
+	<a href="/">
+		<img class="h-[109px]" src="/logo.png" />
 	</a>
-	<div>
-		<p id="radno_vreme">Svakog dana od 14 do 23</p>
-		<div id="split">
-			<div>
-				<p>0800-300-303</p>
-				<a id="email" href="mailto:vanja@centarsrce.org">
-					vanja@centarsrce.org
-				</a>
-			</div>
-			<p id="podrska">
-				Podrška putem četa<br />na dnu stranice<br />našeg sajta
-			</p>
-		</div>
+	<p
+		class="bg-brand desktop:mt-0 desktop:px-4 mt-4 rounded-full px-4 py-2 text-center font-semibold text-white"
+	>
+		Svakog dana od 14 do 23
+	</p>
+	<div class="text-center">
+		<p class="mr-4">0800-300-303</p>
+		<p>
+			<a class="text-brand font-semibold" href="mailto:vanja@centarsrce.org">
+				vanja@centarsrce.org
+			</a>
+		</p>
 	</div>
-	<a class="desktop:block hidden" href="/donacije">
-		<Image src={doniraj} alt="Podržite rad Srca" width="170" />
-	</a>
+	<p class="desktop:text-lg desktop:leading-5 text-center text-sm leading-4">
+		Podrška putem četa<br />na dnu stranice<br />našeg sajta
+	</p>
+	<DonationButton className="desktop:block hidden flex-shrink-0" />
 </header>
-
-<style>
-	@media (width >= 1170px) {
-		header {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-	}
-
-	header {
-		color: #3d3d3d;
-		font-family: Cambria, Georgia, serif;
-		font-size: 26px;
-		margin: auto;
-		max-width: 1170px;
-		padding: 20px 0;
-	}
-
-	header p {
-		margin: 0;
-	}
-
-	#radno_vreme {
-		background-color: #8f64aa;
-		border-radius: 9999px;
-		color: #ffffff;
-		margin-bottom: 5px;
-		text-align: center;
-		width: 407px;
-	}
-
-	#split {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	#email {
-		color: #8d5fa8;
-		text-decoration: none;
-	}
-
-	#podrska {
-		font-size: 18px;
-		text-align: center;
-	}
-</style>
