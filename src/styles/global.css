@@ -6,6 +6,7 @@
 	--font-sans--font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 	--color-brand: #8b60a6;
 	--color-neutral: #4d4d4d;
+	--breakpoint-desktop: 1170px;
 }
 
 @supports (font-variation-settings: normal) {
