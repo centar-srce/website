@@ -1,5 +1,10 @@
 ---
 import '../styles/global.css';
+import MobileNav from '../components/MobileNav.astro';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Network from '../components/Network.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -16,8 +21,15 @@ import '../styles/global.css';
 		<link rel="preconnect" href="https://rsms.me/" />
 		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 	</head>
-	<body>
-		<slot />
+	<body class="flex min-h-screen flex-col">
+		<MobileNav />
+		<Header />
+		<Nav />
+		<main class="flex-1">
+			<slot />
+		</main>
+		<Network />
+		<Footer />
 		<!--Start of Tawk.to Script-->
 		<script type="text/javascript">
 			var Tawk_API = Tawk_API || {},
@@ -35,12 +47,3 @@ import '../styles/global.css';
 		<!--End of Tawk.to Script-->
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		min-height: 100%;
-	}
-</style>

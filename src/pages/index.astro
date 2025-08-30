@@ -1,24 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Nav from '../components/Nav.astro';
-import MobileNav from '../components/MobileNav.astro';
 import { Image } from 'astro:assets';
 import hero from '../assets/hero.jpg';
 import ParallaxBackground from '../components/ParallaxBackground.astro';
 import bg1 from '../assets/bg1.jpg';
 import bg2 from '../assets/bg2.jpg';
-import Network from '../components/Network.astro';
-import Footer from '../components/Footer.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<MobileNav />
-	<Header />
-	<Nav />
 	<Image id="hero" src={hero} alt="" />
 	<ParallaxBackground image={bg1} title="Samoubistvo ne mora da se dogodi!">
 		Iskren i neosuđujući razgovor, u kom osobu pažljivo slušamo i prihvatamo je
@@ -43,8 +35,6 @@ import Footer from '../components/Footer.astro';
 		Zainteresovani smo za saradnju u oblasti zaštite i unapređenja mentalnog
 		zdravlja sa javnim, korporativnim i civilnim sektorom
 	</ParallaxBackground>
-	<Network />
-	<Footer />
 </Layout>
 
 <style>
