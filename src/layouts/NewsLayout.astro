@@ -1,0 +1,23 @@
+---
+import Layout from './Layout.astro';
+const {
+	frontmatter: { title, date, image },
+} = Astro.props;
+---
+
+<Layout>
+	<article class="mx-auto max-w-[1080px] space-y-4">
+		<div class="px-4">
+			<h1
+				class="text-brand desktop:text-4xl desktop:text-center desktop:mt-8 desktop:mb-4 text-2xl font-bold"
+			>
+				{title}
+			</h1>
+			<h2 class="desktop:text-center">{date}</h2>
+		</div>
+		<img class="my-4 w-full" src={image} />
+		<div class="space-y-4 px-4">
+			<slot />
+		</div>
+	</article>
+</Layout>
