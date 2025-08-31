@@ -1,0 +1,17 @@
+@import './global.css';
+
+article a {
+	@apply text-brand font-semibold underline;
+}
+
+article blockquote {
+	@apply bg-brand/25 rounded-lg border p-2 shadow-lg;
+}
+
+article em {
+	@apply text-brand font-semibold not-italic;
+}
+
+article ul {
+	@apply list-image-[url(/bullet.png)] space-y-2 pl-8;
+}

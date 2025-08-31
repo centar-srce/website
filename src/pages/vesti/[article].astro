@@ -1,0 +1,41 @@
+---
+import '../../styles/markdown.css';
+import type { GetStaticPaths } from 'astro';
+import getArticles from '../../getArticles';
+
+export const getStaticPaths = (() => {
+	const articles = getArticles();
+	return articles.map(({ title, date, imageSrc, Content, slug }) => ({
+		params: {
+			article: slug,
+		},
+		props: {
+			title,
+			date: new Date(date).toLocaleDateString('sr-RS').replace(/ /g, ''),
+			imageSrc,
+			Content,
+		},
+	}));
+}) satisfies GetStaticPaths;
+
+import Layout from '../../layouts/Layout.astro';
+
+const { title, date, imageSrc, Content } = Astro.props;
+---
+
+<Layout>
+	<article class="mx-auto max-w-[1080px] space-y-4">
+		<div class="px-4">
+			<h1
+				class="text-brand desktop:text-4xl desktop:text-center desktop:mt-8 desktop:mb-4 text-2xl font-bold"
+			>
+				{title}
+			</h1>
+			<h2 class="desktop:text-center">{date}</h2>
+		</div>
+		<img class="my-4 w-full" src={imageSrc} />
+		<div id="mdcontent" class="space-y-4 px-4">
+			<Content />
+		</div>
+	</article>
+</Layout>

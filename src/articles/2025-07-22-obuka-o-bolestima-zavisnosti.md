@@ -1,8 +1,9 @@
 ---
-layout: '../../layouts/NewsLayout.astro'
 title: Obuka o bolestima zavisnosti
-date: 22.07.2025.
 image: /obuka_zavisnost.jpeg
+preview:
+  Centar Srce započinje sa radom na projektu "Dostupnija prevencija suicida kod
+  bolesti...
 ---
 
 Centar Srce započinje sa radom na projektu "Dostupnija prevencija suicida kod

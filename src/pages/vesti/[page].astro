@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from 'astro';
+import getArticles from '../../getArticles';
+
+export const getStaticPaths = (({ paginate }) => {
+	return paginate(getArticles(), { pageSize: 2 });
+}) satisfies GetStaticPaths;
+
+import Layout from '../../layouts/Layout.astro';
+import Link from '../../components/Link.astro';
+
+const { page } = Astro.props;
+---
+
+<Layout>
+	<h1>Strana {page.currentPage}</h1>
+	<ul>
+		{
+			page.data.map(({ title, slug }) => (
+				<li>
+					<Link to={`/vesti/${slug}`}>{title}</Link>
+				</li>
+			))
+		}
+	</ul>
+</Layout>
