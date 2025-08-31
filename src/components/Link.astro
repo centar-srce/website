@@ -1,11 +1,12 @@
 ---
-const { to, disabled = !to } = Astro.props;
+const { to, dark, disabled = !to } = Astro.props;
 ---
 
 <a
 	href={to}
 	class:list={[
-		'text-neutral hover:text-brand transition-colors',
+		'hover:text-brand transition-colors',
+		dark ? 'text-white' : 'text-neutral',
 		{ 'pointer-events-none cursor-not-allowed opacity-50': disabled },
 	]}
 >

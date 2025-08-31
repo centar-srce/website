@@ -1,16 +1,20 @@
+---
+import Link from './Link.astro';
+---
+
 <footer>
 	<div id="data">
 		<div>
 			<h2>Resursi</h2>
 			<ul>
-				<li><a href="#">Samoubistvo</a></li>
-				<li><a href="#">Kako pomoći?</a></li>
-				<li><a href="#">Mentalno zdravlje</a></li>
-				<li><a href="#">Download</a></li>
-				<li><a href="#">O nama</a></li>
-				<li><a href="#">Vesti</a></li>
-				<li><a href="#">Volontiranje</a></li>
-				<li><a href="#">Donacije</a></li>
+				<li><Link dark>Samoubistvo</Link></li>
+				<li><Link dark>Kako pomoći?</Link></li>
+				<li><Link dark>Mentalno zdravlje</Link></li>
+				<li><Link dark>Download</Link></li>
+				<li><Link dark>O nama</Link></li>
+				<li><Link dark>Vesti</Link></li>
+				<li><Link to="/volontiranje" dark>Volontiranje</Link></li>
+				<li><Link to="/donacije" dark>Donacije</Link></li>
 			</ul>
 		</div>
 		<div>
@@ -126,19 +130,6 @@
 	ul {
 		padding: 0;
 		list-style: none;
-	}
-
-	a {
-		text-decoration: none;
-		font-size: 14px;
-		color: #ffffff;
-		transition-property: color;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 150ms;
-	}
-
-	a:hover {
-		color: #8b60a6;
 	}
 
 	p {
