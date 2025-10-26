@@ -45,9 +45,13 @@ import { ROUTES } from '../routes';
 		<li class="nav-item">
 			<a href="#">Mentalno zdravlje</a>
 			<ul class="nav-submenu">
-				<li><a href="#">Očuvanje mentalnog zdravlja</a></li>
-				<li><a href="#">Dan mentalnog zdravlja</a></li>
-				<li><a href="#">Psihička kriza</a></li>
+				<li>
+					<a href={ROUTES.preservingMentalHealth}>
+						Očuvanje mentalnog zdravlja
+					</a>
+				</li>
+				<li><a href={ROUTES.mentalHealthDay}>Dan mentalnog zdravlja</a></li>
+				<li><a href={ROUTES.psychologicalCrisis}>Psihička kriza</a></li>
 			</ul>
 		</li>
 		<li class="nav-item">
