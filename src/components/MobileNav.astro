@@ -7,11 +7,13 @@ import { ROUTES } from '../routes';
 
 const brandColor = '#8b60a6';
 const textColor = '#3d3d3d';
+
+// TODO: Create submenus.
 ---
 
 <header>
 	<div id="header-content">
-		<a href="/"><Logo id="logo" /></a>
+		<a href={ROUTES.home}><Logo id="logo" /></a>
 		<DonationButton className="mr-4 ml-auto" />
 		<input id="trigger" type="checkbox" />
 		<label for="trigger">
@@ -20,10 +22,10 @@ const textColor = '#3d3d3d';
 	</div>
 	<nav>
 		<ul>
-			<li><Link to="/">Početna</Link></li>
-			<li><Link>Samoubistvo</Link></li>
-			<li><Link>Kako pomoći?</Link></li>
-			<li><Link>Mentalno zdravlje</Link></li>
+			<li><Link to={ROUTES.home}>Početna</Link></li>
+			<li><Link to={ROUTES.thinkingAboutSuicide}>Samoubistvo</Link></li>
+			<li><Link to={ROUTES.whatYouCanDo}>Kako pomoći?</Link></li>
+			<li><Link to={ROUTES.preservingMentalHealth}>Mentalno zdravlje</Link></li>
 			<li><Link>Download</Link></li>
 			<li><Link>O nama</Link></li>
 			<li><Link to={ROUTES.news}>Vesti</Link></li>
