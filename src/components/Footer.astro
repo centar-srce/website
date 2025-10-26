@@ -1,4 +1,5 @@
 ---
+import { ROUTES } from '../routes';
 import Link from './Link.astro';
 ---
 
@@ -12,9 +13,9 @@ import Link from './Link.astro';
 				<li><Link dark>Mentalno zdravlje</Link></li>
 				<li><Link dark>Download</Link></li>
 				<li><Link dark>O nama</Link></li>
-				<li><Link to="/vesti" dark>Vesti</Link></li>
-				<li><Link to="/volontiranje" dark>Volontiranje</Link></li>
-				<li><Link to="/donacije" dark>Donacije</Link></li>
+				<li><Link to={ROUTES.news} dark>Vesti</Link></li>
+				<li><Link to={ROUTES.volunteering} dark>Volontiranje</Link></li>
+				<li><Link to={ROUTES.donations} dark>Donacije</Link></li>
 			</ul>
 		</div>
 		<div>

@@ -1,5 +1,6 @@
 ---
 import Logo from '../../public/favicon.svg';
+import { ROUTES } from '../routes';
 ---
 
 <nav>
@@ -16,31 +17,29 @@ import Logo from '../../public/favicon.svg';
 			<a href="#">Samoubistvo</a>
 			<ul class="nav-submenu">
 				<li>
-					<a href="/razmisljas-li-o-samoubistvu">
+					<a href={ROUTES.thinkingAboutSuicide}>
 						Razmišljaš li o samoubistvu?
 					</a>
 				</li>
-				<li><a href="/velicina-problema">Veličina problema</a></li>
-				<li><a href="/predrasude">Predrasude</a></li>
-				<li><a href="/faktori-rizika">Faktori rizika</a></li>
+				<li><a href={ROUTES.problemScale}>Veličina problema</a></li>
+				<li><a href={ROUTES.prejudices}>Predrasude</a></li>
+				<li><a href={ROUTES.riskFactors}>Faktori rizika</a></li>
 			</ul>
 		</li>
 		<li class="nav-item">
 			<a href="#">Kako pomoći?</a>
 			<ul class="nav-submenu">
-				<li><a href="/kako-pomoci/znaci-upozorenja">Znaci upozorenja</a></li>
+				<li><a href={ROUTES.warningSigns}>Znaci upozorenja</a></li>
 				<li>
-					<a href="/kako-pomoci/sta-mozete-da-uradite">
-						Šta možete da uradite?
-					</a>
+					<a href={ROUTES.whatYouCanDo}>Šta možete da uradite? </a>
 				</li>
 				<li>
-					<a href="/kako-pomoci/kome-se-mozete-obratiti-za-pomoc">
+					<a href={ROUTES.whoYouCanTurnToForHelp}>
 						Kome se možete obratiti za pomoć?
 					</a>
 				</li>
-				<li><a href="/kako-pomoci/prevencija">Prevencija</a></li>
-				<li><a href="/kako-pomoci/pronadjite-podrsku">Pronađite podršku</a></li>
+				<li><a href={ROUTES.prevention}>Prevencija</a></li>
+				<li><a href={ROUTES.findSupport}>Pronađite podršku</a></li>
 			</ul>
 		</li>
 		<li class="nav-item">
@@ -72,9 +71,9 @@ import Logo from '../../public/favicon.svg';
 				<li><a href="#">Finansiranje</a></li>
 			</ul>
 		</li>
-		<li class="nav-item"><a href="/vesti">Vesti</a></li>
-		<li class="nav-item"><a href="/volontiranje">Volontiranje</a></li>
-		<li class="nav-item"><a href="#">Donacije</a></li>
+		<li class="nav-item"><a href={ROUTES.news}>Vesti</a></li>
+		<li class="nav-item"><a href={ROUTES.volunteering}>Volontiranje</a></li>
+		<li class="nav-item"><a href={ROUTES.donations}>Donacije</a></li>
 	</ul>
 </nav>
 

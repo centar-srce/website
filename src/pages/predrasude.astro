@@ -1,8 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import InlineLink from '../components/InlineLink.astro';
-
-// TODO: Remove need to manually edit link.
+import { ROUTES } from '../routes';
 ---
 
 <Layout>
@@ -73,8 +72,8 @@ import InlineLink from '../components/InlineLink.astro';
 					direktan ili indirektan način nagoveštaje svojoj okolini da razmatra
 					tu opciju. Nema potrebe da krivite sebe ako niste primetili te znake,
 					ali ako ste zabrinuti za nekoga koga znate, možete da se informišete o
-					tome šta možete da učinite da <InlineLink
-						to="/kako-pomoci/sta-mozete-da-uradite">pomognete.</InlineLink
+					tome šta možete da učinite da <InlineLink to={ROUTES.whatYouCanDo}
+						>pomognete.</InlineLink
 					></span
 				>
 			</li>

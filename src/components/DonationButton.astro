@@ -1,9 +1,11 @@
 ---
+import { ROUTES } from '../routes';
+
 const { className } = Astro.props;
 ---
 
 <a
-	href="/donacije"
+	href={ROUTES.donations}
 	class:list={[
 		'bg-brand cursor-pointer rounded-sm px-3 py-1.5 text-sm text-white transition-colors hover:bg-purple-800',
 		'desktop:text-lg desktop:py-2 desktop:rounded-xl desktop:font-semibold ring-brand desktop:ring-4 ring-offset-4 hover:ring-purple-800',
