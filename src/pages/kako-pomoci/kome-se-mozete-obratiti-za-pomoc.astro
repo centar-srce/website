@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BulletList from '../../components/BulletList.astro';
+---
+
+<Layout>
+	<section class="mx-auto my-10 max-w-[1080px] p-4">
+		<h2 class="text-brand text-4xl font-bold">
+			Kome se možete obratiti za pomoć?
+		</h2>
+		<p>
+			Pored toga što slušanjem i podrškom možete mnogo da pomognete osobi, dobro
+			je znati koje organizacije mogu takođe da pruže pomoć - kako osobi koja je
+			suicidalna, tako i vama samima. Za pomoć se možete obratiti:
+		</p>
+		<BulletList>
+			<li>Centru Srce</li>
+			<li>svom lekaru</li>
+			<li>nastavniku</li>
+			<li>školskom psihologu</li>
+			<li>psihoterapeutu</li>
+			<li>
+				specijalističkoj ustanovi kao što je Institut za psihijatriju u Novom
+				Sadu
+			</li>
+		</BulletList>
+	</section>
+</Layout>
+
+<style>
+	p {
+		margin: 1rem 0;
+	}
+</style>

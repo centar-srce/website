@@ -1,0 +1,44 @@
+---
+import InlineLink from '../../components/InlineLink.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+	<section class="mx-auto my-10 max-w-[1080px] p-4">
+		<h2 class="text-brand text-4xl font-bold">
+			Aplikacija za pronalaženje pomoći
+		</h2>
+		<p>
+			Organizacija Befrienders Worldwide (BW) je u junu 2020. objavila
+			aplikaciju koja služi pomaganju u pronalaženju pomoći, koja se može
+			koristi širom sveta. Aplikacija pruža informacije vezane za to gde možete
+			dobiti pomoć.
+		</p>
+		<p class="font-bold">Kako funkcioniše?</p>
+		<p>
+			Automatski pronalazi najbliži BW Centar za pružanje pomoći i obaveštava o
+			detaljima kao što su: adrese, brojevi telefona, e - mailovi, vebsajtovi,
+			jezik koji Centar koristi kao i radno vreme Centra. Aplikacija će
+			automatski prepoznati širu lokaciju mobilnog telefona ili PC računara, ali
+			ne i konkretnu lokaciju na kojoj se korisnik nalazi. Na taj način će moći
+			da pruži najbliži Centar za pružanje podrške.
+		</p>
+		<p>
+			Aplikacija za pružanje pomoći se pokreće putem sledeće URL adrese preko
+			mobilnog telefona ili PC računara:
+		</p>
+		<p>
+			<InlineLink to="https://help.befrienders.org"
+				>https://help.befrienders.org</InlineLink>
+		</p>
+		<p>
+			Gde god da si u svetu - možeš pronaći najbliži Centar za pružanje podrške
+		</p>
+	</section>
+</Layout>
+
+<style>
+	p {
+		margin: 1rem 0;
+	}
+</style>
