@@ -8,9 +8,11 @@ import Link from './Link.astro';
 		<div>
 			<h2>Resursi</h2>
 			<ul>
-				<li><Link dark>Samoubistvo</Link></li>
-				<li><Link dark>Kako pomoći?</Link></li>
-				<li><Link dark>Mentalno zdravlje</Link></li>
+				<li><Link to={ROUTES.thinkingAboutSuicide} dark>Samoubistvo</Link></li>
+				<li><Link to={ROUTES.whatYouCanDo} dark>Kako pomoći?</Link></li>
+				<li>
+					<Link to={ROUTES.preservingMentalHealth} dark>Mentalno zdravlje</Link>
+				</li>
 				<li><Link dark>Download</Link></li>
 				<li><Link dark>O nama</Link></li>
 				<li><Link to={ROUTES.news} dark>Vesti</Link></li>
