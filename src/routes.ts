@@ -24,4 +24,5 @@ export const ROUTES = {
 
 	volunteering: '/volontiranje',
 	donations: '/donacije',
+	download: '/download',
 } as const;

@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<section class="mx-auto my-10 max-w-[1080px] p-4">
+		<h1 class="text-brand text-4xl font-bold">Materijali za preuzimanje</h1>
+		<p class="my-4">
+			Ovde možete preuzeti naše materijale, sačuvati ih za sebe ili podeliti sa
+			nekim kome bi mogli da budu od pomoći.
+		</p>
+		<ul class="list-disc space-y-3 pl-6">
+			<li>
+				<a
+					href="/downloads/suicid26.pdf"
+					download
+					class="text-brand font-semibold underline"
+				>
+					Šta je samoubistvo? (PDF)
+				</a>
+			</li>
+			<li>
+				<a
+					href="/downloads/undp_poster.pdf"
+					download
+					class="text-brand font-semibold underline"
+				>
+					Ako posegneš za nečim neka to bude razgovor (PDF)
+				</a>
+			</li>
+		</ul>
+	</section>
+</Layout>
