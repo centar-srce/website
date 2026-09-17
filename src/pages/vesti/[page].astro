@@ -15,12 +15,10 @@ const { page } = Astro.props;
 <Layout>
 	<h1>Strana {page.currentPage}</h1>
 	<ul>
-		{
-			page.data.map(({ title, slug }) => (
-				<li>
-					<Link to={`/vesti/${slug}`}>{title}</Link>
-				</li>
-			))
-		}
+		{page.data.map(({ title, slug }) => (
+			<li>
+				<Link to={`/vesti/${slug}`}>{title}</Link>
+			</li>
+		))}
 	</ul>
 </Layout>

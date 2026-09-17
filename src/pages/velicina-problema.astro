@@ -8,9 +8,11 @@ import InlineLink from '../components/InlineLink.astro';
 	<section class="mx-auto my-10 max-w-[1080px] p-4">
 		<h2 class="text-brand text-4xl font-bold">Veličina problema</h2>
 		<p>
-			Prema proceni <InlineLink to="http://www.who.int/"
-				>Svetske zdravstvene organizacije</InlineLink
-			>, godišnje u celom svetu umre oko 800.000 ljudi usled samoubistva. Suicid
+			Prema proceni{' '}
+			<InlineLink to="http://www.who.int/">
+				Svetske zdravstvene organizacije
+			</InlineLink>
+			, godišnje u celom svetu umre oko 800.000 ljudi usled samoubistva. Suicid
 			je jedan od najvećih svetskih javno zdravstvenih problema, ističe se u
 			izveštajima Svetske zdravstvene organizacije. Činjenice koje zabrinjavaju
 			su:
@@ -50,30 +52,95 @@ import InlineLink from '../components/InlineLink.astro';
 			U tabeli su predstavljene stope samoubistva od 2006. do 2020. godine u
 			Srbiji. Izvor je Republički zavod za statistiku.
 		</p>
-		<div
-			class="bg-brand/25 inline-block overflow-hidden rounded-lg border border-black shadow-lg"
-		>
+		<div class="bg-brand/25 inline-block overflow-hidden rounded-lg border border-black shadow-lg">
 			<table>
 				<tr>
 					<th>Godina</th>
-					<th>Broj<br />samoubistava</th>
-					<th>Stopa samoubistva (broj<br /> samoubistava na 100.000 ljudi)</th>
+					<th>
+						Broj
+						<br />
+						samoubistava
+					</th>
+					<th>
+						Stopa samoubistva (broj
+						<br /> samoubistava na 100.000 ljudi)
+					</th>
 				</tr>
-				<tr><td>2006.</td><td>1444</td><td>19.5</td></tr>
-				<tr><td>2007.</td><td>1354</td><td>18.0</td></tr>
-				<tr><td>2008.</td><td>1290</td><td>18.0</td></tr>
-				<tr><td>2009.</td><td>1376</td><td>18.8</td></tr>
-				<tr><td>2010.</td><td>1209</td><td>16.6</td></tr>
-				<tr><td>2011.</td><td>1256</td><td>17.4</td></tr>
-				<tr><td>2012.</td><td>1245</td><td>17.3</td></tr>
-				<tr><td>2013.</td><td>1198</td><td>16.7</td></tr>
-				<tr><td>2014.</td><td>1134</td><td>15.9</td></tr>
-				<tr><td>2015.</td><td>1064</td><td>15.0</td></tr>
-				<tr><td>2016.</td><td>962</td><td>13.6</td></tr>
-				<tr><td>2017.</td><td>1005</td><td>14.3</td></tr>
-				<tr><td>2018.</td><td>949</td><td>13.6</td></tr>
-				<tr><td>2019.</td><td>941</td><td>13.5</td></tr>
-				<tr><td>2020.</td><td>895</td><td>13.0</td></tr>
+				<tr>
+					<td>2006.</td>
+					<td>1444</td>
+					<td>19.5</td>
+				</tr>
+				<tr>
+					<td>2007.</td>
+					<td>1354</td>
+					<td>18.0</td>
+				</tr>
+				<tr>
+					<td>2008.</td>
+					<td>1290</td>
+					<td>18.0</td>
+				</tr>
+				<tr>
+					<td>2009.</td>
+					<td>1376</td>
+					<td>18.8</td>
+				</tr>
+				<tr>
+					<td>2010.</td>
+					<td>1209</td>
+					<td>16.6</td>
+				</tr>
+				<tr>
+					<td>2011.</td>
+					<td>1256</td>
+					<td>17.4</td>
+				</tr>
+				<tr>
+					<td>2012.</td>
+					<td>1245</td>
+					<td>17.3</td>
+				</tr>
+				<tr>
+					<td>2013.</td>
+					<td>1198</td>
+					<td>16.7</td>
+				</tr>
+				<tr>
+					<td>2014.</td>
+					<td>1134</td>
+					<td>15.9</td>
+				</tr>
+				<tr>
+					<td>2015.</td>
+					<td>1064</td>
+					<td>15.0</td>
+				</tr>
+				<tr>
+					<td>2016.</td>
+					<td>962</td>
+					<td>13.6</td>
+				</tr>
+				<tr>
+					<td>2017.</td>
+					<td>1005</td>
+					<td>14.3</td>
+				</tr>
+				<tr>
+					<td>2018.</td>
+					<td>949</td>
+					<td>13.6</td>
+				</tr>
+				<tr>
+					<td>2019.</td>
+					<td>941</td>
+					<td>13.5</td>
+				</tr>
+				<tr>
+					<td>2020.</td>
+					<td>895</td>
+					<td>13.0</td>
+				</tr>
 			</table>
 		</div>
 		<p>

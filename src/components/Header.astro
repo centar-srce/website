@@ -4,15 +4,11 @@ import doniraj from '../assets/doniraj.png';
 import DonationButton from './DonationButton.astro';
 ---
 
-<header
-	class="text-neutral desktop:flex-row flex flex-col items-center justify-between gap-2 p-6 text-lg"
->
+<header class="text-neutral desktop:flex-row flex flex-col items-center justify-between gap-2 p-6 text-lg">
 	<a href="/">
 		<img class="h-[109px]" src="/logo.png" />
 	</a>
-	<p
-		class="bg-brand desktop:mt-0 desktop:px-4 mt-4 rounded-full px-4 py-2 text-center font-semibold text-white"
-	>
+	<p class="bg-brand desktop:mt-0 desktop:px-4 mt-4 rounded-full px-4 py-2 text-center font-semibold text-white">
 		Svakog dana od 14 do 23h
 	</p>
 	<div class="text-center">
@@ -24,7 +20,11 @@ import DonationButton from './DonationButton.astro';
 		</p>
 	</div>
 	<p class="desktop:text-lg desktop:leading-5 text-center text-sm leading-4">
-		Podrška putem četa<br />na dnu stranice<br />našeg sajta
+		Podrška putem četa
+		<br />
+		na dnu stranice
+		<br />
+		našeg sajta
 	</p>
 	<DonationButton className="desktop:block hidden flex-shrink-0" />
 </header>

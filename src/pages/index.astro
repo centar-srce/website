@@ -15,32 +15,28 @@ const latestArticles = getArticles().slice(0, 3);
 	<Image id="hero" src={hero} alt="" />
 	<div></div>
 	<div class="px-4">
-		<div
-			class="bg-brand/25 border-neutral/50 mx-auto my-4 rounded-sm border p-4"
-		>
+		<div class="bg-brand/25 border-neutral/50 mx-auto my-4 rounded-sm border p-4">
 			<h2 class="mb-4 text-2xl font-semibold">Vesti</h2>
 			<div class="flex flex-col gap-4 sm:flex-row sm:justify-between">
-				{
-					latestArticles.map(({ title, date, imageSrc, slug, preview }) => {
-						const formattedDate = new Date(date)
-							.toLocaleDateString('sr-RS')
-							.replace(/ /g, '');
-						return (
-							<div class="flex flex-col items-center space-y-2 rounded-sm bg-white p-2 text-center">
-								<img class="h-[112px] w-[178px] object-cover" src={imageSrc} />
-								<h3 class="m-0 line-clamp-2 font-semibold">{title}</h3>
-								<p class="m-0 text-xs font-medium">{formattedDate}</p>
-								<p class="line-clamp-2 text-sm">{preview}</p>
-								<a
-									class="bg-brand mt-auto cursor-pointer rounded-sm px-3 py-1.5 text-sm text-white transition-colors hover:bg-purple-800"
-									href={`/vesti/${slug}`}
-								>
-									Pročitaj još
-								</a>
-							</div>
-						);
-					})
-				}
+				{latestArticles.map(({ title, date, imageSrc, slug, preview }) => {
+					const formattedDate = new Date(date)
+						.toLocaleDateString('sr-RS')
+						.replace(/ /g, '');
+					return (
+						<div class="flex flex-col items-center space-y-2 rounded-sm bg-white p-2 text-center">
+							<img class="h-[112px] w-[178px] object-cover" src={imageSrc} />
+							<h3 class="m-0 line-clamp-2 font-semibold">{title}</h3>
+							<p class="m-0 text-xs font-medium">{formattedDate}</p>
+							<p class="line-clamp-2 text-sm">{preview}</p>
+							<a
+								class="bg-brand mt-auto cursor-pointer rounded-sm px-3 py-1.5 text-sm text-white transition-colors hover:bg-purple-800"
+								href={`/vesti/${slug}`}
+							>
+								Pročitaj još
+							</a>
+						</div>
+					);
+				})}
 			</div>
 		</div>
 	</div>
@@ -59,8 +55,10 @@ const latestArticles = getArticles().slice(0, 3);
 			<a
 				href="https://docs.google.com/forms/d/e/1FAIpQLSdzGf4Quz4UIqIOD5eNf0s7327HNh_3Vza2ZJJWayBNWPSdLQ/viewform"
 				target="_blank"
-				id="prijava_link">Prijava</a
+				id="prijava_link"
 			>
+				Prijava
+			</a>
 		</div>
 	</div>
 	<ParallaxBackground image={bg2} title="Sarađujte sa nama!">

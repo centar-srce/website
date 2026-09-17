@@ -13,7 +13,9 @@ const textColor = '#3d3d3d';
 
 <header>
 	<div id="header-content">
-		<a href={ROUTES.home}><Logo id="logo" /></a>
+		<a href={ROUTES.home}>
+			<Logo id="logo" />
+		</a>
 		<DonationButton className="mr-4 ml-auto" />
 		<input id="trigger" type="checkbox" />
 		<label for="trigger">
@@ -22,16 +24,36 @@ const textColor = '#3d3d3d';
 	</div>
 	<nav>
 		<ul>
-			<li><Link to={ROUTES.home}>Početna</Link></li>
-			<li><Link to={ROUTES.thinkingAboutSuicide}>Samoubistvo</Link></li>
-			<li><Link to={ROUTES.whatYouCanDo}>Kako pomoći?</Link></li>
-			<li><Link to={ROUTES.preservingMentalHealth}>Mentalno zdravlje</Link></li>
-			<li><Link to={ROUTES.download}>Download</Link></li>
-			<li><Link>O nama</Link></li>
-			<li><Link to={ROUTES.news}>Vesti</Link></li>
-			<li><Link to={ROUTES.volunteering}>Volontiranje</Link></li>
-			<li><Link to={ROUTES.donations}>Donacije</Link></li>
-			<li><Link>Podkast</Link></li>
+			<li>
+				<Link to={ROUTES.home}>Početna</Link>
+			</li>
+			<li>
+				<Link to={ROUTES.thinkingAboutSuicide}>Samoubistvo</Link>
+			</li>
+			<li>
+				<Link to={ROUTES.whatYouCanDo}>Kako pomoći?</Link>
+			</li>
+			<li>
+				<Link to={ROUTES.preservingMentalHealth}>Mentalno zdravlje</Link>
+			</li>
+			<li>
+				<Link to={ROUTES.download}>Download</Link>
+			</li>
+			<li>
+				<Link>O nama</Link>
+			</li>
+			<li>
+				<Link to={ROUTES.news}>Vesti</Link>
+			</li>
+			<li>
+				<Link to={ROUTES.volunteering}>Volontiranje</Link>
+			</li>
+			<li>
+				<Link to={ROUTES.donations}>Donacije</Link>
+			</li>
+			<li>
+				<Link>Podkast</Link>
+			</li>
 		</ul>
 	</nav>
 </header>
